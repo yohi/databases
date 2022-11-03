@@ -4,6 +4,7 @@ services:
       context: ./postgres
       args:
         - DB_LANG=ja_JP
+    command: postgres -c log_statement=all
     environment:
       TZ: Asia/Tokyo
       POSTGRES_USER: root
