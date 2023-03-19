@@ -4,7 +4,7 @@ services:
       context: ./postgres
       args:
         - DB_LANG=ja_JP
-    command: postgres -c log_statement=all
+    command: postgres -c log_statement=all -c max_locks_per_transaction=1024
     environment:
       TZ: Asia/Tokyo
       POSTGRES_USER: root
